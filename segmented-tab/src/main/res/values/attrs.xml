@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SegmentedTab">
+        <attr name="tabSelectedColor" format="integer|reference" />
+        <attr name="tabUnselectedColor" format="integer|reference" />
+        <attr name="titleColor" format="integer|reference" />
+        <attr name="titleTextSize" format="integer|dimension" />
+        <attr name="titleFontPath" format="string" />
+    </declare-styleable>
+</resources>
