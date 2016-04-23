@@ -47,8 +47,6 @@ dependencies {
 
 # Sample usage
 
-It works like a EditText.
-
 ```xml
    <com.marlon.android.widget.SegmentedTab
         android:id="@+id/segmentedTab"
@@ -70,7 +68,7 @@ You can customize the component according with attributes shown below
 | app:tabSelectedColor  | It is optional. But if you want to customize you must be definy a simple color | 
 | app:tabUnselectedColor| It is optional. But if you want to customize you must be definy a simple color | 
 | app:titleColor        | It is optional. But if you want to customize you must to definy a ColorStateList | 
-| app:titleFontPath     | It is optional. But if you want to customize the font you must to set a path to the ttf file |
+| app:titleFontPath     | It is optional. But if you want to customize the font you must to set a path to the font file |
 
 License
 ---
