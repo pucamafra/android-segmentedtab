@@ -18,7 +18,7 @@ Latest version
 Usage
 ---
 
-In order to use the library, there are 2 different options:
+In order to use the library, there are 3 different options:
 
 **1. Gradle dependency** (recommended)
 
@@ -42,6 +42,15 @@ dependencies {
       <artifactId>segmented-tab</artifactId>
       <version>1.0.0</version>
       <type>pom</type>
+</dependency>
+```
+
+**3. Ivy**
+- Add the following to your `pom.xml`:
+
+ ```xml
+<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.0.0'>
+  		<artifact name='$AID' ext='pom'></artifact>
 </dependency>
 ```
 
