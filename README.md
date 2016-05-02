@@ -54,7 +54,7 @@ dependencies {
 # Sample usage
 
 ```xml
-   <com.marlon.android.widget.SegmentedTab
+   <com.marlonmafra.android.widget.SegmentedTab
         android:id="@+id/segmentedTab"
         android:layout_width="match_parent"
         android:layout_height="60dp"
