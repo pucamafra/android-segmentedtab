@@ -1,4 +1,4 @@
-package com.marlon.android.widget;
+package com.marlonmafra.android.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.marlon.android.widget.utils.FontCache;
-import com.marlon.android.widget.utils.Utils;
+import com.marlonmafra.android.widget.utils.FontCache;
+import com.marlonmafra.android.widget.utils.Utils;
 
 import java.lang.reflect.Field;
 import java.util.List;

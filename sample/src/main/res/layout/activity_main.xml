@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.marlon.android.widget.SegmentedTab
+    <com.marlonmafra.android.widget.SegmentedTab
         android:id="@+id/segmentedTab"
         android:layout_width="match_parent"
         android:layout_height="60dp"

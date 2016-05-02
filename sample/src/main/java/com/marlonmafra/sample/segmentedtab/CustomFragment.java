@@ -1,4 +1,4 @@
-package com.marlon.sample.segmentedtab;
+package com.marlonmafra.sample.segmentedtab;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.marlon.sample.segmentedtab.R;
 
 public class CustomFragment extends Fragment {
 

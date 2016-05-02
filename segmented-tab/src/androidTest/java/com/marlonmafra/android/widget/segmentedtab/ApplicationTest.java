@@ -1,4 +1,4 @@
-package com.marlon.sample.segmentedtab;
+package com.marlonmafra.android.widget.segmentedtab;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

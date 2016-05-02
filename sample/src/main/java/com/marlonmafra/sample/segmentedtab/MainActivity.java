@@ -1,12 +1,12 @@
-package com.marlon.sample.segmentedtab;
+package com.marlonmafra.sample.segmentedtab;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.marlon.android.widget.SegmentedTab;
-import com.marlon.sample.segmentedtab.adapter.SubTabAdapter;
+import com.marlonmafra.android.widget.SegmentedTab;
+import com.marlonmafra.sample.segmentedtab.adapter.SubTabAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

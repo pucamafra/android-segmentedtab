@@ -1,4 +1,4 @@
-package com.marlon.android.widget.utils;
+package com.marlonmafra.android.widget.utils;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.marlon.android.widget;
+package com.marlonmafra.android.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -10,7 +10,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.marlon.android.widget.utils.Utils;
+import com.marlonmafra.android.widget.utils.Utils;
 
 abstract class TabView {
 

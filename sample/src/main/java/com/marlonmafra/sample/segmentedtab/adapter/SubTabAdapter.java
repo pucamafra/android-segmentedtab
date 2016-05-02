@@ -1,4 +1,4 @@
-package com.marlon.sample.segmentedtab.adapter;
+package com.marlonmafra.sample.segmentedtab.adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
