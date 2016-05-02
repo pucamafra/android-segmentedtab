@@ -46,12 +46,9 @@ dependencies {
 ```
 
 **3. Ivy**
-- Add the following to your `pom.xml`:
 
  ```xml
-<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.0.0'>
-  		<artifact name='$AID' ext='pom'></artifact>
-</dependency>
+<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.0.0'/>
 ```
 
 # Sample usage
