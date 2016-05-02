@@ -21,6 +21,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':segmented-tab')
+    compile 'com.marlonmafra.android.widget:segmented-tab:1.0.0'
     compile 'com.android.support:appcompat-v7:23.3.0'
 }

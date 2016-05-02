@@ -16,7 +16,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'segmented-tab'
 
-    publishedGroupId = 'com.marlon.android.widget'
+    publishedGroupId = 'com.marlonmafra.android.widget'
     libraryName = 'Android - SegmentedTab'
     artifact = 'segmented-tab'
 
