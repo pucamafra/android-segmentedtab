@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-	   compile 'com.marlon.android.widget:segmented-tab:1.0.0'
+	   compile 'com.marlonmafra.android.widget:segmented-tab:1.0.0'
 }
 ```
 
