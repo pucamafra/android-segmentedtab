@@ -1,6 +1,8 @@
 android-segmentedtab
 ===============
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--segmentedtab-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3545)
+
 An Android library that bring segmented control style to TabLayout.
 
 <img width="270" src="./screenshots/sample.png" />
