@@ -6,5 +6,7 @@
         <attr name="titleColor" format="integer|reference" />
         <attr name="titleTextSize" format="integer|dimension" />
         <attr name="titleFontPath" format="string" />
+        <attr name="borderColorUnselected" format="integer|reference"/>
+        <attr name="borderColorSelected" format="integer|reference"/>
     </declare-styleable>
 </resources>

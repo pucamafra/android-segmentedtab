@@ -26,11 +26,11 @@ abstract class TabView {
         this.txtTitle = (TextView) this.view.findViewById(R.id.txtTitle);
     }
 
-    public void setBackground(int colorSelected, int colorUnselected) {
+    public void setBackground(int colorSelected, int colorUnselected, int colorBorderSelected, int colorBorderUnselected) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-            this.view.setBackgroundDrawable(getDrawableStates(colorSelected, colorUnselected));
+            this.view.setBackgroundDrawable(getDrawableStates(colorSelected, colorUnselected, colorBorderSelected, colorBorderUnselected));
         } else {
-            this.view.setBackground(getDrawableStates(colorSelected, colorUnselected));
+            this.view.setBackground(getDrawableStates(colorSelected, colorUnselected, colorBorderSelected, colorBorderUnselected));
         }
     }
 
@@ -58,12 +58,12 @@ abstract class TabView {
         this.txtTitle.setTypeface(typeFace);
     }
 
-    private StateListDrawable getDrawableStates(int colorSelected, int colorUnselected) {
+    private StateListDrawable getDrawableStates(int colorSelected, int colorUnselected, int colorBorderSelected, int colorBorderUnselected) {
         StateListDrawable stateListDrawable = new StateListDrawable();
-        stateListDrawable.addState(new int[]{android.R.attr.state_pressed}, getDrawable(colorSelected, colorSelected));
-        stateListDrawable.addState(new int[]{android.R.attr.state_focused}, getDrawable(colorSelected, colorSelected));
-        stateListDrawable.addState(new int[]{android.R.attr.state_selected}, getDrawable(colorSelected, colorSelected));
-        stateListDrawable.addState(new int[]{}, getDrawable(colorUnselected, colorSelected));
+        stateListDrawable.addState(new int[]{android.R.attr.state_pressed}, getDrawable(colorSelected, colorBorderSelected));
+        stateListDrawable.addState(new int[]{android.R.attr.state_focused}, getDrawable(colorSelected, colorBorderSelected));
+        stateListDrawable.addState(new int[]{android.R.attr.state_selected}, getDrawable(colorSelected, colorBorderSelected));
+        stateListDrawable.addState(new int[]{}, getDrawable(colorUnselected, colorBorderUnselected));
 
         return stateListDrawable;
     }

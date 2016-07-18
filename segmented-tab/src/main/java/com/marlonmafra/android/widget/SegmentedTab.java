@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatDrawableManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -24,6 +26,8 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
     private ColorStateList titleColor;
     private int titleTextSize = 12;
     private Typeface typeface;
+    private int borderColorSelected;
+    private int borderColorUnselected;
 
     public SegmentedTab(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -58,6 +62,10 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
             if (path != null) {
                 this.typeface = FontCache.getInstance().put(path, getContext().getAssets());
             }
+
+            this.borderColorSelected = typedArray.getColor(R.styleable.SegmentedTab_borderColorSelected, this.tabSelectedColor);
+            this.borderColorUnselected = typedArray.getColor(R.styleable.SegmentedTab_borderColorUnselected, this.tabUnselectedColor);
+
             typedArray.recycle();
         }
 
@@ -72,7 +80,7 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
         }
 
         for (int i = 0; i < getTabCount(); i++) {
-            TabLayout.Tab tab = getTabAt(i);
+            Tab tab = getTabAt(i);
             if (tab != null) {
                 tab.setCustomView(getTabView(i, titles));
             }
@@ -80,6 +88,14 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
 
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) getLayoutParams();
         layoutParams.setMargins(Utils.getValueByDensity(getContext(), 20), layoutParams.topMargin, Utils.getValueByDensity(getContext(), 20), layoutParams.bottomMargin);
+
+        int backgroundTransparent = android.R.color.transparent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            this.setBackground(AppCompatDrawableManager.get().getDrawable(getContext(), backgroundTransparent));
+        }else{
+            setBackgroundDrawable(
+                    AppCompatDrawableManager.get().getDrawable(getContext(), backgroundTransparent));
+        }
     }
 
     private View getTabView(int position, List<String> titles) {
@@ -94,7 +110,7 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
             tab = new CenterTabView(getContext(), R.layout.center_tab);
         }
 
-        tab.setBackground(this.tabSelectedColor, this.tabUnselectedColor);
+        tab.setBackground(this.tabSelectedColor, this.tabUnselectedColor, this.borderColorSelected, this.borderColorUnselected);
         tab.setTitle(titles.get(position));
         tab.setTextSize(this.titleTextSize);
         tab.setTextColorState(this.titleColor);
