@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-	   compile 'com.marlonmafra.android.widget:segmented-tab:1.0.0'
+	   compile 'com.marlonmafra.android.widget:segmented-tab:1.1.0'
 }
 ```
 
@@ -42,7 +42,7 @@ dependencies {
 <dependency>
       <groupId>com.marlon.android.widget</groupId>
       <artifactId>segmented-tab</artifactId>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <type>pom</type>
 </dependency>
 ```
@@ -50,7 +50,7 @@ dependencies {
 **3. Ivy**
 
  ```xml
-<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.0.0'/>
+<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.1.0'/>
 ```
 
 # Sample usage
@@ -60,6 +60,8 @@ dependencies {
         android:id="@+id/segmentedTab"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        app:borderColorSelected="@android:color/black"
+        app:borderColorUnselected="@color/colorPrimary"
         android:layout_marginTop="20dp"
         app:tabSelectedColor="@color/colorPrimary"
         app:tabUnselectedColor="@android:color/white"
@@ -71,12 +73,14 @@ dependencies {
 
 You can customize the component according with attributes shown below
 
-| Attribute             | Description   |
-| ----------------------|:-------------:| 
-| app:tabSelectedColor  | It is optional. But if you want to customize you must be definy a simple color | 
-| app:tabUnselectedColor| It is optional. But if you want to customize you must be definy a simple color | 
-| app:titleColor        | It is optional. But if you want to customize you must to definy a ColorStateList | 
-| app:titleFontPath     | It is optional. But if you want to customize the font you must to set a path to the font file |
+| Attribute                | Description   |
+| ----------------------   |:-------------:| 
+| app:tabSelectedColor     | It is optional. But if you want to customize you must be definy a simple color | 
+| app:tabUnselectedColor   | It is optional. But if you want to customize you must be definy a simple color | 
+| app:titleColor           | It is optional. But if you want to customize you must to definy a ColorStateList | 
+| app:titleFontPath        | It is optional. But if you want to customize the font you must to set a path to the font file |
+| app:borderColorSelected  | It is optional. But if you want to customize you must to definy a ColorStateList | 
+| app:borderColorUnselected| It is optional. But if you want to customize the font you must to set a path to the font file |
 
 License
 ---
