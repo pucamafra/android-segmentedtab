@@ -1,6 +1,8 @@
 android-segmentedtab
 ===============
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--segmentedtab-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3545)
+
 An Android library that bring segmented control style to TabLayout.
 
 <img width="270" src="./screenshots/sample.png" />
@@ -18,7 +20,7 @@ Latest version
 Usage
 ---
 
-In order to use the library, there are 2 different options:
+In order to use the library, there are 3 different options:
 
 **1. Gradle dependency** (recommended)
 
@@ -29,7 +31,7 @@ repositories {
 }
 
 dependencies {
-	   compile 'com.marlon.android.widget:segmented-tab:1.0.0'
+	   compile 'com.marlonmafra.android.widget:segmented-tab:1.0.0'
 }
 ```
 
@@ -45,10 +47,16 @@ dependencies {
 </dependency>
 ```
 
+**3. Ivy**
+
+ ```xml
+<dependency org='com.marlonmafra.android.widget' name='segmented-tab' rev='1.0.0'/>
+```
+
 # Sample usage
 
 ```xml
-   <com.marlon.android.widget.SegmentedTab
+   <com.marlonmafra.android.widget.SegmentedTab
         android:id="@+id/segmentedTab"
         android:layout_width="match_parent"
         android:layout_height="60dp"

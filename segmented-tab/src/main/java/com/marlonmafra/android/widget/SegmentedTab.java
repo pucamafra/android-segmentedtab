@@ -24,6 +24,8 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
     private ColorStateList titleColor;
     private int titleTextSize = 12;
     private Typeface typeface;
+    private int borderColorSelected;
+    private int borderColorUnselected;
 
     public SegmentedTab(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -54,6 +56,9 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
 
             this.titleTextSize = typedArray.getDimensionPixelSize(R.styleable.SegmentedTab_titleTextSize, this.titleTextSize);
 
+            this.borderColorSelected = typedArray.getColor(R.styleable.SegmentedTab_borderColorSelected, this.tabSelectedColor);
+            this.borderColorUnselected = typedArray.getColor(R.styleable.SegmentedTab_borderColorUnselected, this.tabSelectedColor);
+
             String path = typedArray.getString(R.styleable.SegmentedTab_titleFontPath);
             if (path != null) {
                 this.typeface = FontCache.getInstance().put(path, getContext().getAssets());
@@ -72,7 +77,7 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
         }
 
         for (int i = 0; i < getTabCount(); i++) {
-            TabLayout.Tab tab = getTabAt(i);
+            Tab tab = getTabAt(i);
             if (tab != null) {
                 tab.setCustomView(getTabView(i, titles));
             }
@@ -94,7 +99,7 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
             tab = new CenterTabView(getContext(), R.layout.center_tab);
         }
 
-        tab.setBackground(this.tabSelectedColor, this.tabUnselectedColor);
+        tab.setBackground(this.tabSelectedColor, this.tabUnselectedColor, this.borderColorSelected, this.borderColorUnselected);
         tab.setTitle(titles.get(position));
         tab.setTextSize(this.titleTextSize);
         tab.setTextColorState(this.titleColor);
