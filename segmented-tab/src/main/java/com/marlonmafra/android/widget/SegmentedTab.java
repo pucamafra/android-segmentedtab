@@ -4,10 +4,8 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatDrawableManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -58,14 +56,13 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
 
             this.titleTextSize = typedArray.getDimensionPixelSize(R.styleable.SegmentedTab_titleTextSize, this.titleTextSize);
 
+            this.borderColorSelected = typedArray.getColor(R.styleable.SegmentedTab_borderColorSelected, this.tabSelectedColor);
+            this.borderColorUnselected = typedArray.getColor(R.styleable.SegmentedTab_borderColorUnselected, this.tabSelectedColor);
+
             String path = typedArray.getString(R.styleable.SegmentedTab_titleFontPath);
             if (path != null) {
                 this.typeface = FontCache.getInstance().put(path, getContext().getAssets());
             }
-
-            this.borderColorSelected = typedArray.getColor(R.styleable.SegmentedTab_borderColorSelected, this.tabSelectedColor);
-            this.borderColorUnselected = typedArray.getColor(R.styleable.SegmentedTab_borderColorUnselected, this.tabUnselectedColor);
-
             typedArray.recycle();
         }
 
@@ -88,14 +85,6 @@ public class SegmentedTab extends android.support.design.widget.TabLayout {
 
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) getLayoutParams();
         layoutParams.setMargins(Utils.getValueByDensity(getContext(), 20), layoutParams.topMargin, Utils.getValueByDensity(getContext(), 20), layoutParams.bottomMargin);
-
-        int backgroundTransparent = android.R.color.transparent;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            this.setBackground(AppCompatDrawableManager.get().getDrawable(getContext(), backgroundTransparent));
-        }else{
-            setBackgroundDrawable(
-                    AppCompatDrawableManager.get().getDrawable(getContext(), backgroundTransparent));
-        }
     }
 
     private View getTabView(int position, List<String> titles) {
