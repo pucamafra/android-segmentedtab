@@ -75,12 +75,12 @@ You can customize the component according with attributes shown below
 
 | Attribute                | Description   |
 | ----------------------   |:-------------:| 
-| app:tabSelectedColor|It is optional. But if you want to customize you must be definy a simple color | 
-| app:tabUnselectedColor|It is optional. But if you want to customize you must be definy a simple color | 
-| app:titleColor|It is optional. But if you want to customize you must to definy a ColorStateList | 
+| app:tabSelectedColor|It is optional. But if you want to customize you must define a simple color | 
+| app:tabUnselectedColor|It is optional. But if you want to customize you must define a simple color |
+| app:borderColorSelected  |It is optional. But if you want to customize you must define a simple color | 
+| app:borderColorUnselected|It is optional. But if you want to customize you must define a simple color |
+| app:titleColor|It is optional. But if you want to customize you must define a ColorStateList | 
 | app:titleFontPath|It is optional. But if you want to customize the font you must to set a path to the font file |
-| app:borderColorSelected  |It is optional. But if you want to customize you must to definy a ColorStateList | 
-| app:borderColorUnselected|It is optional. But if you want to customize the font you must to set a path to the font file |
 
 License
 ---
