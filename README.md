@@ -28,6 +28,7 @@ In order to use the library, there are 3 different options:
  ```gradle
 repositories {
 	    jcenter()
+	    maven {url "https://dl.bintray.com/pucamafra/maven"}
 }
 
 dependencies {
